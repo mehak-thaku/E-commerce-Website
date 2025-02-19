@@ -1,0 +1,14 @@
+type Framework = 'react' | 'vue';
+
+interface MyComponentProps {
+  framework: Framework;
+  // ... other props
+}
+
+const MyComponent: React.FC<MyComponentProps> = ({ framework, ...props }) => {
+  // ... component logic
+};
+
+MyComponent.defaultProps = {
+  framework: 'react',
+};
